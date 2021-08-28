@@ -10,6 +10,5 @@ public:
 	bool addStudent(Student* student);
 	Student* getStudent(std::string name);
 	Student* getStudent(std::string name, int year);
-	~StudentGroup() { delete[] _students; };
 };
 

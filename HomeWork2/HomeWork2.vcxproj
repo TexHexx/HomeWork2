@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fruit.cpp" />
-    <ClCompile Include="GrannySmith.cpp" />
     <ClCompile Include="HomeWork2.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Student.cpp" />
