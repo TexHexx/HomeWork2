@@ -1,8 +1,8 @@
 #include "StudentGroup.h"
 
-bool StudentGroup::addStudent(Student& student) {
+bool StudentGroup::addStudent(Student* student) {
 	if (_studentsAmount < _maxStudents) {
-		_students[_studentsAmount++] = &student;
+		_students[_studentsAmount++] = student;
 		return true;
 	}
 	return false;
