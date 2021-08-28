@@ -8,9 +8,9 @@ void FirstTask()
 {
     StudentGroup group;
 
-    group.addStudent(*(new Student("Иванов", 21, sex::man, 81, 2021)));
-    group.addStudent(*(new Student("Петрова", 24, sex::woman, 54, 2020)));
-    group.addStudent(*(new Student("Сидоров", 29, sex::man, 74, 2019)));
+    group.addStudent(new Student("Иванов", 21, sex::man, 81, 2021));
+    group.addStudent(new Student("Петрова", 24, sex::woman, 54, 2020));
+    group.addStudent(new Student("Сидоров", 29, sex::man, 74, 2019));
 
     std::cout << "Total students in group:" << group.getStudentsAmount() << std::endl;
 
