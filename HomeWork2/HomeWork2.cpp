@@ -16,8 +16,10 @@ void FirstTask()
 
     while (true) {
         std::string searchName;
-        std::cout << "Enter student to search: ";
+        std::cout << "Enter student to search(write 'exit' to stop): ";
         std::cin >> searchName;
+        if (searchName == "exit")
+            break;
         Student* foundStudent = group.getStudent(searchName);
         if (foundStudent == NULL) {
             std::cout << "Student not found" << std::endl;
@@ -47,7 +49,7 @@ int main()
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    //FirstTask();
+    FirstTask();
     //SecondTask();
     return 0;
 };
