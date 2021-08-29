@@ -10,5 +10,10 @@ public:
 	bool addStudent(Student* student);
 	Student* getStudent(std::string name);
 	Student* getStudent(std::string name, int year);
+	~StudentGroup() {
+		while (_studentsAmount > 0) {
+			delete _students[--_studentsAmount];
+		}
+	};
 };
 
