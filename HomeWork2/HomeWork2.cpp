@@ -11,9 +11,9 @@ void FirstTask()
     std::string studentName2 = "Петрова";
     std::string studentName3 = "Сидоров";
 
-    group.addStudent(*(new Student(&studentName1, 24, sex::man, 54, 2021)));
-    group.addStudent(*(new Student(&studentName2, 24, sex::woman, 54, 2020)));
-    group.addStudent(*(new Student(&studentName3, 29, sex::man, 74, 2019)));
+    group.addStudent(new Student(&studentName1, 24, sex::man, 54, 2021));
+    group.addStudent(new Student(&studentName2, 24, sex::woman, 54, 2020));
+    group.addStudent(new Student(&studentName3, 29, sex::man, 74, 2019));
 
     std::cout << "Total students in group:" << group.getStudentsAmount() << std::endl;
 
@@ -21,6 +21,8 @@ void FirstTask()
         std::string searchName;
         std::cout << "Enter student to search(write 'exit' to stop): ";
         std::cin >> searchName;
+        if (searchName == "exit")
+            break;
         Student* foundStudent = group.getStudent(&searchName);
         if (foundStudent == NULL) {
             std::cout << "Student not found" << std::endl;
@@ -51,7 +53,7 @@ int main()
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    FirstTask();
-    //SecondTask();
+    //FirstTask();
+    SecondTask();
     return 0;
 };
