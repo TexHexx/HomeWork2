@@ -1,6 +1,6 @@
 #include "Person.h"
 
-void Person::setName(std::string name) {
+void Person::setName(std::string* name) {
 	_personName = name;
 };
 

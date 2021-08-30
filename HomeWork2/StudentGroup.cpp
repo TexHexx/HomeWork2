@@ -8,17 +8,17 @@ bool StudentGroup::addStudent(Student& student) {
 	return false;
 };
 
-Student* StudentGroup::getStudent(std::string name) {
+Student* StudentGroup::getStudent(std::string* name) {
 	for (int i = 0; i < _studentsAmount; i++) {
-		if (_students[i]->getName() == name)
+		if (*_students[i]->getName() == *name)
 			return _students[i];
 	}
 	return NULL;
 };
 
-Student* StudentGroup::getStudent(std::string name, int year) {
+Student* StudentGroup::getStudent(std::string* name, int year) {
 	for (int i = 0; i < _studentsAmount; i++) {
-		if ((_students[i]->getName() == name) && (_students[i]->getStudyYear() == year))
+		if ((*_students[i]->getName() == *name) && (_students[i]->getStudyYear() == year))
 			return _students[i];
 	}
 	return NULL;

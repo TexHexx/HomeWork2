@@ -8,7 +8,7 @@ private:
 public:
 	int getStudentsAmount() { return _studentsAmount; };
 	bool addStudent(Student& student);
-	Student* getStudent(std::string name);
-	Student* getStudent(std::string name, int year);
+	Student* getStudent(std::string* name);
+	Student* getStudent(std::string* name, int year);
 };
 
