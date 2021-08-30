@@ -7,8 +7,13 @@ private:
 	Student* _students[_maxStudents];
 public:
 	int getStudentsAmount() { return _studentsAmount; };
-	bool addStudent(Student& student);
-	Student* getStudent(std::string* name);
-	Student* getStudent(std::string* name, int year);
+	bool addStudent(Student* student);
+	Student* getStudent(std::string name);
+	Student* getStudent(std::string name, int year);
+	~StudentGroup() {
+		while (_studentsAmount > 0) {
+			delete _students[--_studentsAmount];
+		}
+	};
 };
 
